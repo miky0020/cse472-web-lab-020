@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEU Tech Event Information and Registration</title>
+
+    <!-- Lab 02 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+
+        <h1>SEU Tech Event</h1>
+
+        <p>
+            Southeast University Tech Event Information and Registration Page
+        </p>
+
+    </header>
+
+
+    <!-- Navigation Section -->
+    <nav>
+
+        <a href="#about">About</a> |
+        <a href="#topics">Topics</a> |
+        <a href="#schedule">Schedule</a> |
+        <a href="#register">Register</a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+
+        <!-- About Section -->
+        <section id="about">
+
+            <div>
+
+                <h2>About the Event</h2>
+
+                <p>
+                    SEU Tech Event is a student-focused technology event
+                    designed to introduce students to modern web and
+                    computing technologies.
+                </p>
+
+                <p>
+                    The <span>main goal</span> of this event is to improve
+                    students' technical knowledge and practical skills.
+                </p>
+
+            </div>
+
+
+            <!-- Event Venue -->
+            <div>
+
+                <h3>Event Venue</h3>
+
+                <p>
+                    Department of Computer Science and Engineering,
+                    Southeast University.
+                </p>
+
+                <a href="https://www.seu.edu.bd" target="_blank">
+                    Visit Southeast University
+                </a>
+
+            </div>
+
+
+            <!-- Event Image -->
+            <div>
+
+                <h3>Event Image</h3>
+
+                <img
+                    src="assets/images/campus.png"
+                    alt="Southeast University campus"
+                    width="400"
+                >
+
+            </div>
+
+
+            <!-- Interaction 1: Registration Status -->
+            <div>
+
+                <h3>Registration Status</h3>
+
+                <button
+                    type="button"
+                    onclick="checkRegistration()"
+                >
+                    Check Registration Status
+                </button>
+
+                <p id="registrationStatus">
+                    Click the button to check the status.
+                </p>
+
+            </div>
+
+
+            <!-- Interaction 2: Seat Availability -->
+            <div>
+
+                <h3>Seat Availability</h3>
+
+                <button
+                    type="button"
+                    onclick="checkSeats()"
+                >
+                    Check Seat Availability
+                </button>
+
+                <p id="seatMessage">
+                    Seat information will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Topics Section -->
+        <section id="topics">
+
+            <h2>Topics Covered</h2>
+
+
+            <h3>Core Topics</h3>
+
+            <ul>
+
+                <li>Web Development</li>
+
+                <li>Cyber Security</li>
+
+                <li>AI</li>
+
+                <li>Database Systems</li>
+
+            </ul>
+
+
+            <h3>Learning Sequence</h3>
+
+            <ol>
+
+                <li>Introduction to Technology</li>
+
+                <li>Learn Modern Tools</li>
+
+                <li>Develop Practical Skills</li>
+
+                <li>Build a Project</li>
+
+            </ol>
+
+
+            <h3>Detailed Plan</h3>
+
+            <ul>
+
+                <li>
+                    Web Development
+
+                    <ol>
+
+                        <li>HTML</li>
+
+                        <li>CSS</li>
+
+                        <li>JavaScript</li>
+
+                    </ol>
+
+                </li>
+
+
+                <li>
+                    Cyber Security
+
+                    <ul>
+
+                        <li>Network Security</li>
+
+                        <li>Web Security</li>
+
+                        <li>Ethical Hacking</li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+
+            <h2>Event Schedule</h2>
+
+            <table border="1">
+
+                <tr>
+
+                    <th>Day</th>
+
+                    <th>Time</th>
+
+                    <th>Topic</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Sunday</td>
+
+                    <td>10:00 AM - 12:00 PM</td>
+
+                    <td>Web Development</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Monday</td>
+
+                    <td>10:00 AM - 12:00 PM</td>
+
+                    <td>Cyber Security</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Tuesday</td>
+
+                    <td>10:00 AM - 12:00 PM</td>
+
+                    <td>AI</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Wednesday</td>
+
+                    <td>10:00 AM - 12:00 PM</td>
+
+                    <td>Database</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Registration Section -->
+        <section id="register">
+
+            <h2>Registration Form</h2>
+
+            <form>
+
+
+                <!-- Full Name -->
+                <label for="studentName">
+                    Full Name:
+                </label>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <!-- Interaction 3: Personal Greeting -->
+                <button
+                    type="button"
+                    onclick="showGreeting()"
+                >
+                    Show Greeting
+                </button>
+
+                <p id="greetingMessage"></p>
+
+                <br>
+
+
+                <!-- Student ID -->
+                <label for="studentid">
+                    Student ID:
+                </label>
+
+                <br>
+
+                <input
+                    type="number"
+                    id="studentid"
+                    name="studentid"
+                    placeholder="Enter your student ID"
+                    required
+                >
+
+                <br>
+                <br>
+
+
+                <!-- Email -->
+                <label for="email">
+                    Email Address:
+                </label>
+
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <br>
+                <br>
+
+
+                <!-- Preferred Date -->
+                <label for="date">
+                    Preferred Date:
+                </label>
+
+                <br>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                >
+
+                <br>
+                <br>
+
+
+                <!-- Participation Type -->
+                <p>
+                    Select Participation Type:
+                </p>
+
+
+                <input
+                    type="radio"
+                    id="student"
+                    name="participation"
+                    value="Student"
+                >
+
+                <label for="student">
+                    Student
+                </label>
+
+
+                <input
+                    type="radio"
+                    id="guest"
+                    name="participation"
+                    value="Guest"
+                >
+
+                <label for="guest">
+                    Guest
+                </label>
+
+                <br>
+                <br>
+
+
+                <!-- Skills -->
+                <p>
+                    Skills You Already Know:
+                </p>
+
+
+                <input
+                    type="checkbox"
+                    id="html"
+                    name="html"
+                    value="HTML"
+                >
+
+                <label for="html">
+                    HTML
+                </label>
+
+
+                <input
+                    type="checkbox"
+                    id="css"
+                    name="css"
+                    value="CSS"
+                >
+
+                <label for="css">
+                    CSS
+                </label>
+
+
+                <input
+                    type="checkbox"
+                    id="javascript"
+                    name="javascript"
+                    value="JavaScript"
+                >
+
+                <label for="javascript">
+                    JavaScript
+                </label>
+
+                <br>
+                <br>
+
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    Submit Registration
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Contact: cse.lab@seu.edu.bd
+        </p>
+
+        <p>
+            CSE 472 - Web and Internet Programming Lab
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
