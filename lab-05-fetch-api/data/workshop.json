@@ -1,0 +1,13 @@
+{
+  "title": "Advanced Web Development Workshop",
+  "date": "24 September 2026",
+  "venue": "CSE Lab 613",
+  "seats": 50,
+  "instructor": {
+    "name": "Mr. Abid Ahmed",
+    "email": "abid.ahmed@useu.edu.bd"
+  },
+  
+  "duration": "5 hours"
+  
+}
